@@ -1,4 +1,4 @@
-<?php require_once HEADER; ?>
+
 
 <body>
         <div class="contenedorPrincipal" style="display: flex; justify-content: center; align-items: center; padding-top: 50px; padding-bottom: 50px;">
@@ -13,23 +13,6 @@
                                 <a href="recuperarPassword.php">Olvidaste tu clave?</a>
                                 <a href="registroUsuario.php">Registro</a>
                                 <input type="submit" name="login" value="Login" style="width: 100%;padding: 10px;margin: 10px 0;border: 1px solid #ccc;border-radius: 5px;">
-                                <?php
-                                if (isset($_GET["message"])) {
-                                ?>
-                                        <div class="alert alert-primary" role="alert">
-                                                <?php
-                                                switch ($_GET["message"]) {
-                                                        case 'ok':
-                                                                echo 'Por favor revisa tu correo';
-                                                                break;
-                                                        case 'success_password':
-                                                                echo "inicia sesion con tu nuevo password";
-                                                }
-                                                ?>
-                                        </div>
-                                <?php
-                                }
-                                ?>
 
                         </form>
                 </div>

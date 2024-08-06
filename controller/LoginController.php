@@ -27,8 +27,7 @@ class LoginController {
             $resultado = $this->model->isExists($usuario);
             $_SESSION['login'] = $_POST["username"];
             if ($resultado) {
-                echo $_SESSION['login'];
-                header("Location:index.php?");
+                header('Location:index.php?c=tareas&f=index');
                 exit(); // Detener la ejecución después de la redirección
             } else {
                 // Manejar el caso en que el usuario no sea válido
